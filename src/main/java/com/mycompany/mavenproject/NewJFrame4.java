@@ -27,7 +27,7 @@ public class NewJFrame4 extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lblres = new javax.swing.JLabel();
         txtnum1 = new javax.swing.JTextField();
         txtnum2 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
@@ -42,11 +42,11 @@ public class NewJFrame4 extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("Number 1");
+        jLabel1.setText("Number 2");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, -1, -1));
 
-        jLabel2.setName(""); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 130, 20));
+        lblres.setName(""); // NOI18N
+        getContentPane().add(lblres, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 130, 20));
         getContentPane().add(txtnum1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 190, -1));
         getContentPane().add(txtnum2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 190, -1));
 
@@ -112,7 +112,12 @@ public class NewJFrame4 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        int num1 = Integer.parseInt(txtnum1.getText());
+        int num2 = Integer.parseInt(txtnum2.getText());
+        int div = num1 / num2;
+        
+        txtresult1.setText(String.valueOf(div));
+        lblres.setText(String.valueOf(div));
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -182,8 +187,8 @@ public class NewJFrame4 extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel lblres;
     private javax.swing.JTextField txtnum1;
     private javax.swing.JTextField txtnum2;
     private javax.swing.JTextField txtresult1;
